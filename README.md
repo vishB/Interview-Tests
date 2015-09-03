@@ -10,7 +10,7 @@ Create a simple gallery view as shown in the template. The gallery has few set o
 4. On tapping a particular image its preview should be displayed in the preview area. Initially it should display a default image if its taking time to load a particular image.
 
 #API End Point 
-http://192.168.10.34/imageData.php
+http://192.168.10.104/imageData.php
 
 # Expectations
 ## General:
