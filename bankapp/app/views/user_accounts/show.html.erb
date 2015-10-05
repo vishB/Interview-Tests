@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Debit account no:</strong>
+  <%= @user_account.debit_account_no %>
+</p>
+
+<p>
+  <strong>Amount deposit:</strong>
+  <%= @user_account.amount_deposit %>
+</p>
+
+<p>
+  <strong>Deposit type:</strong>
+  <%= @user_account.deposit_type %>
+</p>
+
+<p>
+  <strong>Tenure of deposit:</strong>
+  <%= @user_account.tenure_of_deposit %>
+</p>
+
+<p>
+  <strong>Pan no:</strong>
+  <%= @user_account.pan_no %>
+</p>
+
+<p>
+  <strong>Maturity proceeds:</strong>
+  <%= @user_account.maturity_proceeds %>
+</p>
+
+<p>
+  <strong>Mobile no:</strong>
+  <%= @user_account.mobile_no %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_account.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_account_path(@user_account) %> |
+<%= link_to 'Back', user_accounts_path %>

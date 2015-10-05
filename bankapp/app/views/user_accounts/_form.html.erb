@@ -1,0 +1,61 @@
+<div class="wrapper input-field col-md-4">
+<%= form_for(@user_account) do |f| %>
+  <% if @user_account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_account.errors.count, "error") %> prohibited this user_account from being saved:</h2>
+
+      <ul>
+      <% @user_account.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :debit_account_no %><br>
+    <%= f.number_field :debit_account_no ,:maxlength=>10%>
+  </div>
+  <div class="field">
+    <%= f.label :amount_deposit %><br>
+    <%= f.text_field :amount_deposit %>
+  </div>
+  <div class="field">
+    <%= f.label :deposit_type %><br>
+    <%= f.select :deposit_type,['Saving','Current','Salary','Fixed'],prompt: true %>
+  </div>
+  <div class="field">
+    <%= f.label :tenure_of_deposit %><br>
+    <%= f.text_field :tenure_of_deposit %>
+  </div>
+  <div class="field">
+    <%= f.label :maturity_period %><br>
+    <%= f.text_field :maturity_period %>
+  </div>  
+  <div class="field">
+    <%= f.label :pan_no %><br>
+    <%= f.text_field :pan_no %>
+  </div>
+  <div class="field">
+    <%= f.label :maturity_proceeds %><br>
+    <%= f.check_box :maturity_proceeds %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_no %><br>
+    <%= f.number_field :mobile_no %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<div>
+
+<script>
+  $(function() {
+    $( "#user_account_tenure_of_deposit" ).datepicker();
+  });
+</script>
